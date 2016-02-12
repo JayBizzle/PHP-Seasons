@@ -69,10 +69,10 @@ class Seasons
      */
     public function monthRange($season)
     {
-        if (!in_array($season, $this->seasons)) {
+        if (!in_array(ucfirst($season), $this->seasons)) {
             throw new \Exception($season.' is not a season.');
         }
 
-        return $this->monthRange[array_search($seasons, $this->seasons)];
+        return $this->monthRange[array_search(ucfirst($season), $this->seasons)];
     }
 }
