@@ -1,0 +1,26 @@
+{
+    "name": "jaybizzle/php-seasons",
+    "type": "library",
+    "description": "",
+    "keywords": ["seasons", "season", "date"],
+    "homepage": "https://github.com/JayBizzle/PHP-Seasons/",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Mark Beech",
+            "email": "mbeech@mark-beech.co.uk",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "Jaybizzle\\": "src/"
+        }
+    }
+}
