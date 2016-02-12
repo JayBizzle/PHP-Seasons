@@ -20,15 +20,18 @@ class Seasons
      * Parse input date and return numeric month.
      * 
      * @param  string
-     *
      * @return int
      */
     public function getMonth($date)
     {
-        if (is_null($date)) {
+        if(is_null($date)) {
             return date('n');
         } else {
-            return date('n', strtotime($date));
+            if($parsed_date = strtotime($date)) {
+                return date('n', strtotime($date));
+            } 
+
+            throw new \Exception('Input date must be parsable by strtotime().');
         }
     }
 
