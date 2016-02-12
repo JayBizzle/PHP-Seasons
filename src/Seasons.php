@@ -90,4 +90,3 @@ class Seasons
         return $this;
     }
 }
-}
