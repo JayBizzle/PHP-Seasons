@@ -1,7 +1,7 @@
 {
     "name": "jaybizzle/php-seasons",
     "type": "library",
-    "description": "",
+    "description": "A small utility class that returns the meteorological season from a given date.",
     "keywords": ["seasons", "season", "date"],
     "homepage": "https://github.com/JayBizzle/PHP-Seasons/",
     "license": "MIT",
