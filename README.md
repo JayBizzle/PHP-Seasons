@@ -1,4 +1,4 @@
-CrawlerDetect
+PHP Seasons
 =======
 [![Build Status](https://img.shields.io/travis/JayBizzle/PHP-Seasons/master.svg?style=flat-square)](https://travis-ci.org/JayBizzle/PHP-Seasons) [![Total Downloads](https://img.shields.io/packagist/dt/JayBizzle/PHP-Seasons.svg?style=flat-square)](https://packagist.org/packages/jaybizzle/php-seasons)
 [![MIT](https://img.shields.io/badge/license-MIT-ff69b4.svg?style=flat-square)](https://github.com/JayBizzle/PHP-Seasons) [![Version](https://img.shields.io/packagist/v/jaybizzle/PHP-Seasons.svg?style=flat-square)](https://packagist.org/packages/jaybizzle/php-seasons) [![StyleCI](https://styleci.io/repos/51580966/shield)](https://styleci.io/repos/51580966)
