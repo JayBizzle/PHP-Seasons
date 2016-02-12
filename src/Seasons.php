@@ -15,6 +15,18 @@ class Seasons
         'Summer',
         'Autumn',
     );
+    
+    /**
+     * Month/Season map
+     * 
+     * @var array
+     */
+    public $monthRange = [
+        0 => [12, 1, 2],
+        1 => [3, 4, 5],
+        2 => [6, 7, 8],
+        3 => [9, 10, 11],
+    ];
 
     /**
      * Parse input date and return numeric month.
@@ -45,5 +57,19 @@ class Seasons
     public function get($date = null)
     {
         return $this->seasons[(int) (($this->getMonth($date) % 12) / 3)];
+    }
+    
+    /**
+     * Get months numbers that belong to the season.
+     * 
+     * @param  string $season
+     * @return array
+     */
+    public function monthRange($season)
+    {
+        if(!in_array($season, $this->seasons)) {
+            throw new \Exception($season . ' is not a season.');
+        }
+        return $this->monthRange[array_search($seasons, $this->seasons)];
     }
 }
