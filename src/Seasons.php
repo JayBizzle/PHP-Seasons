@@ -75,15 +75,15 @@ class Seasons
 
         return $this->monthRange[array_search(ucfirst($season), $this->seasons)];
     }
-    
+
     /**
-     * Modify season order to reutrb correct season for souther hemisphere
+     * Modify season order to reutrb correct season for souther hemisphere.
      * 
      * @return Jaybizzle\Season
      */
     public function southern()
     {
-        for($i = 0; $i < 2; $i++) {
+        for ($i = 0; $i < 2; $i++) {
             array_push($this->seasons, array_shift($this->seasons));
         }
 
