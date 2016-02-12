@@ -1,6 +1,6 @@
 <?php
 
-class Seasons extends PHPUnit_Framework_TestCase
+class seasons extends PHPUnit_Framework_TestCase
 {
     protected $season;
 
@@ -20,10 +20,10 @@ class Seasons extends PHPUnit_Framework_TestCase
 
     public function dateStrings()
     {
-        return [
-            ['June', 'Summer'],
-            ['1st October 2016', 'Autumn'],
-            ['31st December', 'Winter'],
-        ];
+        return array(
+            array('June', 'Summer'),
+            array('1st October 2016', 'Autumn'),
+            array('31st December', 'Winter'),
+        );
     }
 }
