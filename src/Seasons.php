@@ -6,7 +6,7 @@ class Seasons
 {
     /**
      * Seasons.
-     * 
+     *
      * @var array
      */
     public $seasons = array(
@@ -18,7 +18,7 @@ class Seasons
 
     /**
      * Month/Season map.
-     * 
+     *
      * @var array
      */
     public $monthRange = array(
@@ -30,7 +30,7 @@ class Seasons
 
     /**
      * Parse input date and return numeric month.
-     * 
+     *
      * @param  string
      *
      * @return int
@@ -50,7 +50,7 @@ class Seasons
 
     /**
      * Parse date, return season.
-     * 
+     *
      * @param  string
      *
      * @return string
@@ -62,7 +62,7 @@ class Seasons
 
     /**
      * Get months numbers that belong to the season.
-     * 
+     *
      * @param string $season
      *
      * @return array
@@ -78,7 +78,7 @@ class Seasons
 
     /**
      * Modify season order to reutrb correct season for souther hemisphere.
-     * 
+     *
      * @return Jaybizzle\Season
      */
     public function southern()
