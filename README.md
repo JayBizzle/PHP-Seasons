@@ -6,7 +6,7 @@ PHP Seasons
 A small utility class that returns the meteorological season from a given date.
 
 ### Installation
-Run `composer require jaybizzle/seasons dev-master` or add `"jaybizzle/seasons" :"dev-master"` to your `composer.json`.
+Run `composer require jaybizzle/php-seasons dev-master` or add `"jaybizzle/php-seasons" :"dev-master"` to your `composer.json`.
 
 ### Usage
 ```PHP
