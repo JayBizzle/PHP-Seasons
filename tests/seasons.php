@@ -1,6 +1,8 @@
 <?php
 
-class seasons extends PHPUnit_Framework_TestCase
+use PHPUnit\Framework\TestCase;
+
+class Seasons extends TestCase
 {
     protected $season;
 
