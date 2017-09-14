@@ -46,6 +46,7 @@ class SeasonsTest extends TestCase
         return array(
             array('20st March', Seasons::SEASON_WINTER),
             array('21st March', Seasons::SEASON_SPRING),
+            array('25st July', Seasons::SEASON_SUMMER),
             array('June', 'Spring'), // june starts in spring and finish in summer
             array('1st October 2016', 'Autumn'),
             array('31st December', 'Winter'),
