@@ -22,5 +22,8 @@
         "psr-4": {
             "Jaybizzle\\": "src/"
         }
+    },
+    "config": {
+        "bin-dir": "bin"
     }
 }
