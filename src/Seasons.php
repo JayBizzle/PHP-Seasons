@@ -4,16 +4,24 @@ namespace Jaybizzle;
 
 class Seasons
 {
+    const SEASON_WINTER = 'Winter';
+
+    const SEASON_SPRING = 'Spring';
+
+    const SEASON_SUMMER = 'Summer';
+
+    const SEASON_AUTUMN = 'Autumn';
+
     /**
      * Seasons.
      *
      * @var array
      */
     public $seasons = array(
-        'Winter',
-        'Spring',
-        'Summer',
-        'Autumn',
+        self::SEASON_WINTER,
+        self::SEASON_SPRING,
+        self::SEASON_SUMMER,
+        self::SEASON_AUTUMN,
     );
 
     /**
