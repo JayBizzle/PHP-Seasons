@@ -64,7 +64,28 @@ class Seasons
      */
     public function get($date = null)
     {
-        return $this->seasons[(int) (($this->getMonth($date) % 12) / 3)];
+        return $this->getSeasonFromDateTime(
+            new \DateTime($date)
+        );
+    }
+
+    public function getSeasonFromDateTime(\DateTime $dateTime)
+    {
+        $dayOfTheYear = $dateTime->format('z');
+
+        if (in_array($dayOfTheYear, range(79, 171))) {
+            return $this->seasons[1];
+        }
+
+        if (in_array($dayOfTheYear, range(172, 264))) {
+            return $this->seasons[2];
+        }
+
+        if (in_array($dayOfTheYear, range(265, 354))) {
+            return $this->seasons[3];
+        }
+
+        return $this->seasons[0];
     }
 
     /**
