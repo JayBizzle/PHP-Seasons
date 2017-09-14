@@ -61,7 +61,7 @@ class SeasonsTest extends TestCase
     {
         $winterRange = $this->season->monthRange(Jaybizzle\Seasons::SEASON_WINTER);
         $this->assertEquals(
-            [12, 1, 2],
+            array(12, 1, 2),
             $winterRange
         );
     }
