@@ -1,7 +1,6 @@
 <?php
 
 use PHPUnit\Framework\TestCase;
-use Jaybizzle\Seasons;
 
 class SeasonsTest extends TestCase
 {
@@ -10,26 +9,6 @@ class SeasonsTest extends TestCase
     public function setUp()
     {
         $this->season = new Jaybizzle\Seasons();
-    }
-
-    /**
-     * @dataProvider fussyDateStrings
-     */
-    public function testMustProvideSeasonByDateTime(
-        $dateTimeValue,
-        $expected
-    ) {
-        $dateTimeObject = new \DateTime($dateTimeValue);
-        $result = $this->season->getSeasonFromDateTime($dateTimeObject);
-        $this->assertequals($expected, $result);
-    }
-
-    public function fussyDateStrings()
-    {
-        return array(
-            array('20st March', Seasons::SEASON_WINTER),
-            array('21st March', Seasons::SEASON_SPRING),
-        );
     }
 
     /**
@@ -44,9 +23,7 @@ class SeasonsTest extends TestCase
     public function dateStrings()
     {
         return array(
-            array('20st March', Seasons::SEASON_WINTER),
-            array('21st March', Seasons::SEASON_SPRING),
-            array('June', 'Spring'), // june starts in spring and finish in summer
+            array('June', 'Summer'),
             array('1st October 2016', 'Autumn'),
             array('31st December', 'Winter'),
         );
