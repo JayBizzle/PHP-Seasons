@@ -1,6 +1,7 @@
 <?php
 
 use PHPUnit\Framework\TestCase;
+use JayBizzle\Seasons;
 
 class SeasonsTest extends TestCase
 {
@@ -8,7 +9,27 @@ class SeasonsTest extends TestCase
 
     public function setUp()
     {
-        $this->season = new Jaybizzle\Seasons();
+        $this->season = new Seasons();
+    }
+
+    /**
+     * @dataProvider fussyDateStrings
+     */
+    public function testMustProvideSeasonByDateTime(
+        $dateTimeValue,
+        $expected
+    ) {
+        $dateTimeObject = new \DateTime($dateTimeValue);
+        $result = $this->season->getSeasonFromDateTime($dateTimeObject);
+        $this->assertequals($expected, $result);
+    }
+
+    public function fussyDateStrings()
+    {
+        return array(
+            array('20st March', Seasons::SEASON_WINTER),
+            array('21st March', Seasons::SEASON_SPRING),
+        );
     }
 
     /**
@@ -23,7 +44,10 @@ class SeasonsTest extends TestCase
     public function dateStrings()
     {
         return array(
-            array('June', 'Summer'),
+            array('20st March', Seasons::SEASON_WINTER),
+            array('21st March', Seasons::SEASON_SPRING),
+            array('25st July', Seasons::SEASON_SUMMER),
+            array('June', 'Spring'), // june starts in spring and finish in summer
             array('1st October 2016', 'Autumn'),
             array('31st December', 'Winter'),
         );
@@ -59,7 +83,7 @@ class SeasonsTest extends TestCase
 
     public function testProvideSeasonsReange()
     {
-        $winterRange = $this->season->monthRange(Jaybizzle\Seasons::SEASON_WINTER);
+        $winterRange = $this->season->monthRange(Seasons::SEASON_WINTER);
         $this->assertEquals(
             array(12, 1, 2),
             $winterRange
@@ -68,11 +92,11 @@ class SeasonsTest extends TestCase
 
     public function testProvideSeasonsReangeInSouthernRegionOfTheWorld()
     {
-        $winter = $this->season->monthRange(Jaybizzle\Seasons::SEASON_WINTER);
+        $winter = $this->season->monthRange(Seasons::SEASON_WINTER);
 
         $season = $this->season->southern();
 
-        $southernSpring = $season->monthRange(Jaybizzle\Seasons::SEASON_SUMMER);
+        $southernSpring = $season->monthRange(Seasons::SEASON_SUMMER);
 
         $this->assertEquals(
             $winter,
