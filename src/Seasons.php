@@ -60,7 +60,6 @@ class Seasons
      * Parse date, return season.
      *
      * @param  string
-     *
      * @return string
      */
     public function get($date = null)
@@ -72,12 +71,11 @@ class Seasons
      * Get months numbers that belong to the season.
      *
      * @param string $season
-     *
      * @return array
      */
     public function monthRange($season)
     {
-        if (!in_array(ucfirst($season), $this->seasons)) {
+        if (! in_array(ucfirst($season), $this->seasons)) {
             throw new \Exception($season.' is not a season.');
         }
 
@@ -85,7 +83,7 @@ class Seasons
     }
 
     /**
-     * Modify season order to reutrb correct season for souther hemisphere.
+     * Modify season order to return correct season for souther hemisphere.
      *
      * @return Jaybizzle\Season
      */
