@@ -177,5 +177,3 @@ Seasons::SEASON_AUTUMN // "Autumn"
 ### License
 
 MIT
-
-[![Analytics](https://ga-beacon.appspot.com/UA-72430465-1/PHP-Seasons/readme?pixel)](https://github.com/JayBizzle/PHP-Seasons)
